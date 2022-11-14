@@ -1,26 +1,89 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Dark Blue: hsl(233, 26%, 24%)
+- Lime Green: hsl(136, 65%, 51%)
+- Bright Cyan: hsl(192, 70%, 51%)
+
+### Neutral
+
+- Grayish Blue: hsl(233, 8%, 62%)
+- Light Grayish Blue: hsl(220, 16%, 96%)
+- Very Light Gray: hsl(0, 0%, 98%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Font
+
+- Family: [Public Sans](https://fonts.google.com/specimen/Public+Sans)
+- Weights: 300, 400, 700 */
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,300&display=swap");
+
+:root {
+  --p1: hsl(233, 26%, 24%);
+  --p2: hsl(136, 65%, 51%);
+  --p3: hsl(192, 70%, 51%);
+  --n1: hsl(233, 8%, 62%);
+  --n2: hsl(220, 16%, 96%);
+  --n3: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+  background-color: var(--n3);
+  text-align: center;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+button {
+  border: none;
 }
 
-* {
-  box-sizing: border-box;
+li {
+  list-style: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
+p {
+  margin: 0 1rem;
+  text-align: justify;
+  text-align-last: center;
+  line-height: 24px;
+  color: var(--n1);
+}
+
+button:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+}
+
+@media screen and (min-width: 450px) {
+  p {
+    text-align: start;
+    text-align-last: start;
   }
 }

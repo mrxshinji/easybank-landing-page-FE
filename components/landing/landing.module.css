@@ -1,0 +1,172 @@
+.landingWrapper {
+  width: 100vw;
+  position: relative;
+  align-content: flex-start;
+  padding-bottom: 4rem;
+}
+
+.introWrapper {
+  min-height: 330px;
+  height: 46vh;
+  width: 100vw;
+  position: relative;
+}
+
+.bg {
+  height: 100%;
+  width: 100vw;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.mockupWrapper {
+  height: 80vh;
+  min-height: 675px;
+  min-width: 90%;
+  position: absolute;
+  top: -180px;
+  left: 5%;
+}
+
+.mockup {
+  object-fit: contain;
+  z-index: 2;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 0 5%;
+  gap: 1.5rem;
+}
+
+.text h1 {
+  font-weight: 400;
+}
+
+.ctaBtn {
+  color: var(--white);
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  letter-spacing: 1px;
+  background-image: linear-gradient(to right, var(--p2), var(--p3));
+}
+
+@media screen and (min-width: 450px) {
+  .landingWrapper {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 0rem;
+  }
+
+
+  .introWrapper {
+    align-self: flex-end;
+    width: 55vw;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    overflow: hidden;
+
+  }
+
+  .bg {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: 0% -50%;
+  }
+
+  .mockupWrapper {
+    height: 60vh;
+    min-height: 675px;
+    width: 55vw;
+    min-width: unset;
+    left: unset;
+    right: 0px;
+    top: -100px;
+  }
+
+  .mockup {
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .text {
+    width: 40vw;
+    float: left;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 0 0 0 1rem;
+    text-align: start;
+  }
+
+  .text p {
+    margin: 0;
+    text-align-last: start;
+  }
+
+  .ctaBtn {
+    align-self: flex-start;
+  }
+}
+
+@media screen and (min-width: 1180px) {
+
+  .landingWrapper {
+    padding-bottom: 0rem;
+  }
+
+  .introWrapper {
+    width: 60vw;
+    height: 65vh;
+  }
+
+  .bg {
+    object-position: left bottom;
+  }
+
+  .mockupWrapper {
+    height: 85vh;
+    width: 40vw;
+    left: unset;
+    right: 0px;
+    top: -100px;
+  }
+
+  .mockup {
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .text {
+    width: 50vw;
+    float: left;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 0 0 0 5rem;
+    text-align: start;
+    width: 80%;
+  }
+
+  .text h1 {
+    font-size: 60px;
+  }
+
+  .text p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: start;
+    text-align-last: start ;
+  }
+
+  .highlight {
+    box-decoration-break: clone;
+  }
+}

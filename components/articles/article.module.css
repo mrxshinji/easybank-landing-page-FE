@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 90%;
+  background-color: var(--white);
+  padding-bottom: 2rem;
+  border-radius: 5px;
+}
+
+.imageWrapper {
+  width: 95%;
+  height: 200px;
+  position: relative;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+  gap: 0.5rem;
+  text-align: start;
+}
+
+.text h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.text p {
+  text-align: start;
+  text-align-last: start;
+  margin: 0;
+  font-size: 16px
+}
+
+@media screen and (min-width: 450px ) {
+  .container {
+    width: 300px;
+  }
+  
+}

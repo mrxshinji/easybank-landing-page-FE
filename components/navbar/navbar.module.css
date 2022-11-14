@@ -1,0 +1,159 @@
+.container {
+  height: 5vh;
+  max-width: 100vw;
+  position: relative;
+  background-color: var(--white);
+  padding: 1rem 1rem;
+  z-index: 20;
+}
+
+.bar {
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative
+}
+
+.logoWrapper {
+  display: flex;
+  position: relative;
+  width: 40vw;
+  height: 100%;
+}
+.logo {
+  object-fit: "contain";
+}
+
+.hamburgerWrapper {
+  position: relative;
+  height: 50%;
+  width: 10vw;
+}
+
+.dropdown {
+  position: absolute;
+  top: 12vh;
+  width: 80%;
+  left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 10px;
+  z-index: 3;
+  padding: 1.5rem 0;
+}
+
+.blurOverlay {
+    position: absolute;
+    top: 8vh;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.navWrapper {
+    position: relative
+}
+
+.navMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navItem {
+  font-weight: 400;
+}
+
+
+
+/* navbar and btn display none until desktop size */
+.navbar {
+  display: none;
+}
+
+.ctaBtn {
+  display: none;
+}
+/* ============================================ */
+
+@media screen and (min-width: 450px) {
+  .hamburgerWrapper {
+    width: 5vw;
+  }
+}
+
+/* ============================================ */
+
+@media screen and (min-width: 1180px) {
+
+  .bar {
+    justify-content: space-evenly;
+  }
+
+  .navbar {
+    display: flex;
+    height: 100%;
+  }
+
+  .navbarMenu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .hamburgerWrapper {
+    display: none;
+  }
+
+  .ctaBtn {
+    color: var(--white);
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    background-image: linear-gradient(to right, var(--p2), var(--p3));
+  }
+
+  .logoWrapper {
+    display: flex;
+    position: relative;
+    width: 20vw;
+    height: 100%;
+  }
+
+  .navbarItem {
+    position: relative
+  }
+
+  .navbarItem:hover {
+    cursor: pointer;
+  }
+
+  .navbarItem:hover::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    height: 1px;
+    background-color: var(--p2);
+    border: 1px solid var(--p2);
+    border-radius: 2px;
+  }
+}
+
+/* ============================================ */
